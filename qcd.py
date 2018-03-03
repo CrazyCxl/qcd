@@ -7,7 +7,7 @@ import os
 def printHelpInfo():
 
     print ' qcd <数字> 切换目录\n qcd 切换到目录1或2\n ----------------\n',\
-            ' -l 列出所有目录\n -rm <path> 删除指定目录\n -i  <path> 插入目录\n -clear 清空目录\n -h 帮助\n'
+            ' -l 列出所有目录\n rm <path> 删除指定目录\n append <path> 追加指定目录\n -i  <path> 插入目录\n clear 清空目录\n -h 帮助\n'
     return
 
 def changeDir(n):
@@ -87,7 +87,7 @@ elif argv_len == 3:
         for line in lines:
             fd.write(line)
         fd.close()
-    elif sys.argv[1] == '-i':
+    elif sys.argv[1] == '-i' or sys.argv[1] == 'append':
         #insert
         if not os.path.exists(targe_path):
             print '目录不存在！'
@@ -99,11 +99,12 @@ elif argv_len == 3:
             targe_path += '\n'
             buff = targe_path + buff
 
-            fd = open(qcd_path,"w")
-            try:
+            if sys.argv[1] == '-i':
+                fd = open(qcd_path,"w")
                 fd.write(buff)
-            except:
-                print qcd_path + ' write error!'
+            else:
+                fd = open(qcd_path,"a")
+                fd.write(targe_path)
             fd.close()
     else:
         print 'error argument :'+ sys.argv[1]
