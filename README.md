@@ -2,11 +2,17 @@ qcd is a tool to quickly change directories.
 ===
 Install
 ---
-
->  cp qcd.sh /etc/profile.d/  
-  cp qcd.py /usr/bin/
+cp qcd.sh /etc/profile.d/  
+cp qcd.py /usr/bin/
 
 restart the terminal 
+
+Install in zsh
+---
+add follow line in ~/.zshrc
+```
+. /etc/profile.d
+```
 
 Use
 ---
