@@ -9,9 +9,9 @@ restart the terminal
 
 Install in zsh
 ---
-add follow line in ~/.zshrc
+add follow line in ~/.zshrc first line
 ```
-. /etc/profile.d
+emulate sh -c 'source /etc/profile'
 ```
 
 Use
