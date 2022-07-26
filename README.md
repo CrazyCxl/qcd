@@ -1,21 +1,25 @@
+# abort
 qcd is a tool to quickly change directories. 
-===
-Install
----
+
+
+# Install
+## Linux
 cp qcd.sh /etc/profile.d/  
 cp qcd.py /usr/bin/
 
 restart the terminal 
 
-Install in zsh
----
+### Install in zsh
 add follow line in ~/.zshrc first line
 ```
 emulate sh -c 'source /etc/profile'
 ```
+## Windows
+run `echo $profile` in powershell
+copy `Microsoft.PowerShell_profile.ps1` content to profile
 
-Use
----
+#Use
+
 - qcd <数字> 切换目录
 - qcd 切换到目录1或2 
 
