@@ -49,7 +49,7 @@ if argv_len == 2:
         #list
         line_count = 1
         for line_str in fd:
-            print(str(line_count) + ' ' + line_str),
+            print(str(line_count) + ' ' + line_str,end=''),
             line_count+=1
 
     elif sys.argv[1] == 'clear':
