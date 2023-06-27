@@ -1,6 +1,14 @@
-# abort
+# about
 qcd is a tool to quickly change directories. 
+```
+PS C:\Program Files> qcd -l
+1 D:\github\yolov5
+2 D:\code\cxl
+PS C:\Program Files> qcd
+PS D:\github\yolov5> qcd
+PS D:\code\cxl>
 
+```
 
 # Install
 ## Linux
@@ -41,15 +49,14 @@ set `QCD_PATH` to qcd.py dir
 
 # Use
 ```
-- qcd <数字> 切换目录
-- qcd 切换到目录1或2 
+qcd <num>
 
-参数：
+params：
 
--  -l 列出所有目录 
--  rm <path> 删除指定目录 
--  append <path> 追加指定目录 
--  -i  <path> 插入目录 
--  clear 清空目录 
--  -h 帮助 
+-l list directory
+rm <path> remove path
+append <path> append path
+-i  <path> insert path
+clear clear path
+-h show help
 ```
